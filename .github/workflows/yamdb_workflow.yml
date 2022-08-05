@@ -60,7 +60,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ravimb06/yamdb_final:latest
+          tags: ravimb06/infra_project:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
