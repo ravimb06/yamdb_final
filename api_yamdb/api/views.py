@@ -1,5 +1,13 @@
 import uuid
 
+from api.filters import TitleFilter
+from api.permissions import (IsAdminModeratorAuthorOrReadOnly,
+                             IsAdminOrReadOnly, OwnerOrAdmins)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, MeSerializer, ReviewSerializer,
+                             SignUpSerializer, TitleAdminSerializer,
+                             TitleReadOnlySerializer, TokenSerializer,
+                             UserSerializer)
 from django.core.mail import send_mail
 from django.db import IntegrityError
 from django.db.models import Avg
@@ -12,15 +20,6 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.filters import TitleFilter
-from api.permissions import (IsAdminModeratorAuthorOrReadOnly,
-                             IsAdminOrReadOnly, OwnerOrAdmins)
-from api.serializers import (CategorySerializer, CommentSerializer,
-                             GenreSerializer, MeSerializer, ReviewSerializer,
-                             SignUpSerializer, TitleAdminSerializer,
-                             TitleReadOnlySerializer, TokenSerializer,
-                             UserSerializer)
 from titles.mixins import CreateListDeleteViewSet
 from titles.models import Category, Genre, Title
 from users.models import User
