@@ -1,4 +1,5 @@
 # REST API для сервиса YaMDb
+Проект развернут по адресу  [ravimb06.ddns.net](http://ravimb06.ddns.net/)
 
 ![example event parameter](https://github.com/ravimb06/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
